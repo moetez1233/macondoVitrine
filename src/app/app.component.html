@@ -1,34 +1,32 @@
 <div class="index-page">
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div
-      class="container-fluid container-xl position-relative d-flex align-items-center"
-    >
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <div class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <img src="assets/img/MacondoLogo.png" class="img-fluid" alt="" />
-      </a>
+        <a href="/"><img src="assets/img/MacondoLogo.png" class="img-fluid" alt="" /></a>
+      </div>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="/#about" id="nav-about">About</a></li>
+          <li><a href="/#services" id="nav-services">Services</a></li>
+          <!-- <li><a href="#portfolio">Products</a></li> -->
+          <!--
           <li><a href="#team">Team</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li class="dropdown">
             <a href="#"
-            ><span>Dropdown</span>
+              ><span>Dropdown</span>
               <i class="bi bi-chevron-down toggle-dropdown"></i
-              ></a>
+            ></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>
               <li class="dropdown">
                 <a href="#"
-                ><span>Deep Dropdown</span>
+                  ><span>Deep Dropdown</span>
                   <i class="bi bi-chevron-down toggle-dropdown"></i
-                  ></a>
+                ></a>
                 <ul>
                   <li><a href="#">Deep Dropdown 1</a></li>
                   <li><a href="#">Deep Dropdown 2</a></li>
@@ -42,27 +40,38 @@
               <li><a href="#">Dropdown 4</a></li>
             </ul>
           </li>
-          <li><a href="#contact">Contact</a></li>
+          -->
+
+          <li><a href="#contact" id="nav-contact">Contact</a></li>
+          <li><a href="/blogs_eng.html" id="nav-blogs">Blogs</a></li>
+          <li>
+            <div class="switch">
+              <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox" [(ngModel)]="selectedLanguge" (click)="switchLanguge()">
+              <label for="language-toggle"></label>
+              <span class="on" id="language-eng">EN</span>
+              <span class="off" id="language-fr">FR</span>
+            </div>
+          </li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="#about">Get Started</a>
+      <!-- <a class="btn-getstarted" href="#about">Get Started</a> -->
     </div>
+    <!-- <div id="navbarContainer"></div> --->
   </header>
-  <div class="main">
+  <main class="main">
     <!-- Hero Section -->
     <section id="hero" class="hero section">
       <div class="container">
         <div class="row gy-4">
           <div
             class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center"
-            data-aos="zoom-out"
           >
             <h1>
               Innovative IOT Solutions for Manufacturing Industries
             </h1>
-            <p class="">
+            <p style="color: rgba(255, 255, 255, .5) !important;">
               MACONDO ENGINEERING is a start-up providing IOT solutions
               for manufacturing industries on a national and regional scale,
               such as digital transformation and Industry 4.0.
@@ -79,8 +88,8 @@
           </div>
           <div
             class="col-lg-6 order-1 order-lg-2 hero-img"
-            data-aos="zoom-out"
-            data-aos-delay="200"
+
+
           >
             <img
               src="assets/img/hero-img.png"
@@ -92,116 +101,11 @@
       </div>
     </section>
     <!-- /Hero Section -->
-
-    <!-- Clients Section -->
-    <!--  <section id="clients" class="clients section">
-      <div class="container" data-aos="zoom-in">
-        <div class="swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 5,
-                  "spaceBetween": 120
-                },
-                "1200": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide">
-              <img
-                src="assets/img/clients/autoliv.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="assets/img/clients/valeo.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="assets/img/clients/marquardt.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="assets/img/clients/kromberg.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="assets/img/clients/sagemcom.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="assets/img/clients/asteel_flash.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="assets/img/clients/hutchinson.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="assets/img/clients/vernicolor.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!-- /Clients Section -->
-
     <!-- About Section -->
     <section id="about" class="about section">
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 class="">About Us</h2>
+      <div class="container section-title" >
+        <h2 id="about-us-title" class="">About Us</h2>
       </div>
       <!-- End Section Title -->
 
@@ -209,53 +113,44 @@
         <div class="row gy-4">
           <div
             class="col-lg-6 content"
-            data-aos="fade-up"
-            data-aos-delay="100"
+
+
           >
-            <p>
-              MACONDO ENGINEERING is a B2B start-up providing IOT
-              solutions for manufacturing industries on a national and
-              regional scale, such as digital transformation and Industry 4.0,
-              by offering cutting-edge technology to revolutionize the sector.
+            <p id="about-us-definition">
+              We are a youth team of experts in different industrial activities and IT fields. Our expertise is diversified between Mechatronics background, Electronics design, IT development and mechanics studies. In addition, we span a range of industrial-related services such as quality improvement and logistics ideations.
             </p>
             <ul>
               <li>
                 <i class="bi bi-check2-circle"></i>
-                <span
-                >Comprehensive IOT solutions designed for
-                    manufacturing.</span
+                <span id="about-us-advantages1"
+                >Customized IOT solutions designed for manufacturing.</span
                 >
               </li>
               <li>
                 <i class="bi bi-check2-circle"></i>
-                <span
+                <span id="about-us-advantages2"
                 >Expertise in digital transformation and Industry 4.0.</span
                 >
               </li>
               <li>
                 <i class="bi bi-check2-circle"></i>
-                <span>Commitment to innovation and industry leadership.</span>
+                <span id="about-us-advantages3">Commitment to innovation and industry leadership.</span>
               </li>
             </ul>
           </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <p>
-              Our mission is to empower manufacturing industries with the
-              latest IOT advancements, ensuring they stay ahead in an
-              ever-evolving market. We focus on delivering scalable and robust
-              solutions that drive efficiency, reduce costs, and enhance
-              productivity.
+          <div class="col-lg-6"  >
+            <p id="about-us-mission">
+              Our mission is to empower manufacturing industries with the latest technologies, to ensure sustainability, robustness and readiness. We focus on delivering scalable and robust solutions that drive efficiency, reduce costs, and enhance productivity.
             </p>
-            <a href="#" class="read-more"
-            ><span>Read More</span><i class="bi bi-arrow-right"></i
-            ></a>
+            <!-- <a href="#" class="read-more"
+              ><span>Read More</span><i class="bi bi-arrow-right"></i
+            ></a> -->
           </div>
         </div>
       </div>
     </section>
     <!-- /About Section -->
-
     <!-- Why Us Section -->
     <section id="why-us" class="section why-us" data-builder="section">
       <div class="container-fluid">
@@ -265,34 +160,32 @@
           >
             <div
               class="content px-xl-5"
-              data-aos="fade-up"
-              data-aos-delay="100"
+
+
             >
               <h3 class="">
-                  <span class="">Why Choose </span
+                  <span id="why-us-title" class="">Why Choose </span
                   ><strong>MACONDO ENGINEERING?</strong>
               </h3>
-              <p class="">
-                At MACONDO ENGINEERING, we provide cutting-edge IOT
-                solutions designed specifically for the manufacturing
-                industries, helping businesses transition seamlessly into the
-                era of Industry 4.0.
+              <p id="why-us-description" class="">
+                We combine ambition and passion to engineering and technologies.  Moreover, we prioritize customers’ satisfaction. Finally, we ensure a continuous follow-up in order to improve quality and performance basing on customer feedback.
               </p>
             </div>
 
             <div
               class="faq-container px-xl-5"
-              data-aos="fade-up"
-              data-aos-delay="200"
+
+
             >
-              <div class="faq-item faq-active">
-                <h3><span>01</span> What makes our solutions unique?</h3>
+              <!-- <div class="faq-item faq-active"> -->
+              <div class="faq-item">
+                <h3>
+                  <span style="display: inline;">01</span>
+                  <p id="why-us-element1-title" style="display: inline;">What makes our solutions unique?</p>
+                </h3>
                 <div class="faq-content">
-                  <p>
-                    Our solutions are specifically designed to meet the
-                    specific needs of the manufacturing sector, combining
-                    advanced technology with industry expertise to drive
-                    efficiency and innovation.
+                  <p id="why-us-element1-description">
+                    Our solutions are specifically designed “on size” to satisfy the specific need of our customers.
                   </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -301,14 +194,12 @@
 
               <div class="faq-item">
                 <h3>
-                  <span>02</span> How do we ensure quality and reliability?
+                  <span style="display: inline;">02</span>
+                  <p id="why-us-element2-title" style="display: inline;">How do we ensure quality and reliability?</p>
                 </h3>
                 <div class="faq-content">
-                  <p>
-                    We employ rigorous testing and continuous improvement
-                    processes to ensure our solutions are not only innovative
-                    but also reliable and scalable, meeting the highest
-                    industry standards and costumers needs.
+                  <p id="why-us-element2-description">
+                    We employ rigorous testing and continuous improvement processes to ensure our solutions are not only innovative but also reliable and aligned with the highest industry standards and costumers needs.
                   </p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -317,10 +208,11 @@
 
               <div class="faq-item">
                 <h3>
-                  <span>03</span> What benefits do our clients experience?
+                  <span style="display: inline;">03</span>
+                  <p id="why-us-element3-title" style="display: inline;">What benefits do our clients experience?</p>
                 </h3>
                 <div class="faq-content">
-                  <p>
+                  <p id="why-us-element3-description">
                     Our clients benefit from increased operational efficiency,
                     reduced costs, and enhanced competitiveness, allowing them
                     to stay ahead in a rapidly evolving market.
@@ -333,12 +225,17 @@
           </div>
 
           <div class="col-lg-5 order-1 order-lg-2 why-us-img">
-            <img
+            <!-- <img
               src="assets/img/why-us.png"
               class="img-fluid"
               alt=""
               data-aos="zoom-in"
-              data-aos-delay="100"
+
+            /> -->
+            <img
+              src="assets/img/Industrial_IoT_HD.png"
+              class="img-fluid animated"
+              alt=""
             />
           </div>
         </div>
@@ -348,24 +245,23 @@
 
     <!-- Skills Section -->
     <section id="skills" class="skills section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" >
         <div class="row">
           <div class="col-lg-6 d-flex align-items-center">
-            <img src="assets/img/skills.png" class="img-fluid" alt="" />
+            <!-- <img src="assets/img/skills.png" class="img-fluid" alt="" /> -->
+            <img src="assets/img/industrial-iot-benefits.png-HD.png" class="img-fluid" alt="" />
           </div>
 
           <div class="col-lg-6 pt-4 pt-lg-0 content">
-            <h3>Our Expertise in IOT Solutions</h3>
-            <p class="fst-italic">
-              MACONDO ENGINEERING is specializing in providing innovative
-              IOT solutions for the manufacturing industry. Our skills
-              cover a wide range of technologies and expertises.
+            <h3 id="skills-title">Our Expertise in IOT Solutions</h3>
+            <p class="fst-italic" id="skills-description">
+              IOT solutions is our basic field of expertise: starting from Data analytics to AI-adapted technologies, passing through machine learning and IOT data sourcing processes.
             </p>
 
             <div class="skills-content skills-animation">
               <div class="progress">
                   <span class="skill"
-                  ><span>IOT Integration</span>
+                  ><span id="skill1">IOT Integration</span>
                     <i class="val">95%</i></span
                   >
                 <div class="progress-bar-wrap">
@@ -382,7 +278,7 @@
 
               <div class="progress">
                   <span class="skill"
-                  ><span>Industry 4.0 Solutions</span>
+                  ><span id="skill2">Industry 4.0 Solutions</span>
                     <i class="val">90%</i></span
                   >
                 <div class="progress-bar-wrap">
@@ -399,7 +295,7 @@
 
               <div class="progress">
                   <span class="skill"
-                  ><span>Data Analytics</span> <i class="val">85%</i></span
+                  ><span id="skill3">Data Analytics</span> <i class="val">85%</i></span
                   >
                 <div class="progress-bar-wrap">
                   <div
@@ -415,7 +311,7 @@
 
               <div class="progress">
                   <span class="skill"
-                  ><span>AI and Machine Learning</span>
+                  ><span id="skill4">AI and Machine Learning</span>
                     <i class="val">80%</i></span
                   >
                 <div class="progress-bar-wrap">
@@ -439,9 +335,9 @@
     <!-- Services Section -->
     <section id="services" class="services section">
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>
+      <div class="container section-title" >
+        <h2 id="services-title">Services</h2>
+        <p id="services-description">
           Explore the advanced technological solutions and industrial services
           provided by MACONDO ENGINEERING.
         </p>
@@ -452,21 +348,20 @@
         <div class="row gy-4">
           <div
             class="col-xl-4 col-md-6 d-flex"
-            data-aos="fade-up"
-            data-aos-delay="100"
+
+
           >
             <div class="service-item position-relative">
               <div class="icon">
                 <i class="bi bi-graph-up-arrow icon"></i>
               </div>
               <h4>
-                <a href="service-details.html" class="stretched-link"
+                <a href="digitalization-service-details.html" class="stretched-link" id="service1-title"
                 >Digitalization</a
                 >
               </h4>
-              <p>
-                Developing advanced technological solutions including
-                monitoring, dashboards, Poka Yoke, machine vision, and more.
+              <p id="service1-description">
+                Developing advance solutions like smart interactive dashboard customized to ensure more reliable data, using different technologies like Thingworx, Grafana…
               </p>
             </div>
           </div>
@@ -474,20 +369,18 @@
 
           <div
             class="col-xl-4 col-md-6 d-flex"
-            data-aos="fade-up"
-            data-aos-delay="300"
+
+
           >
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-gear icon"></i></div>
               <h4>
-                <a href="service-details.html" class="stretched-link"
-                >Industrial Services</a
+                <a href="mechatronics-service-details.html" class="stretched-link" id="service2-title"
+                >Mechatronics Services</a
                 >
               </h4>
-              <p>
-                Offering a range of industrial services such as industrial
-                automation, diagnostic maintenance, and process
-                industrialization.
+              <p id="service2-description">
+                We design electronic and mechanics sophisticated drawing combined with solid code to ensure the robustness and readiness for customers’ requests.
               </p>
             </div>
           </div>
@@ -495,22 +388,20 @@
 
           <div
             class="col-xl-4 col-md-6 d-flex"
-            data-aos="fade-up"
-            data-aos-delay="200"
+
+
           >
             <div class="service-item position-relative">
               <div class="icon">
-                <i class="bi bi-lightning-charge icon"></i>
+                <img width="50px" src="assets/img/3d-printer.ico" alt="" />
               </div>
               <h4>
-                <a href="service-details.html" class="stretched-link"
-                >ESD Services</a
+                <a href="3D-print-service-details.html" class="stretched-link" id="service3-title"
+                >3D Print</a
                 >
               </h4>
-              <p>
-                Providing ESD (electrostatic discharge) services including
-                audits, studies, and implementation of ESD Protected Areas
-                (EPA).
+              <p id="service3-description">
+                We provide different ESD-linked services like audit, customized studies and coordinating EPA implementation with different ESD equipment suppliers.
               </p>
             </div>
           </div>
@@ -520,917 +411,103 @@
     </section>
     <!-- /Services Section -->
 
-    <!-- Call To Action Section -->
-    <!-- <section id="call-to-action" class="call-to-action section">
-      <img src="assets/img/cta-bg.jpg" alt="" />
-
-      <div class="container">
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-xl-9 text-center text-xl-start">
-            <h3>Call To Action</h3>
-            <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
-            </p>
+    <section id="integrator" class="section">
+      <div class="container section-title" >
+        <h2 id="integrator-title">Partnership</h2>
+        <div class="row" style="margin-top:50px">
+          <div class="col-lg-4 pt-4 pt-lg-0 content">
+            <img src="http://www.inductiveautomation.com/integrator/badge/?OFp1WGhYQm9lSGRXRE9Eb2xqN3hVdz09" border="0" width="250" height = "200" alt="Ignition by Inductive Automation" />
           </div>
-          <div class="col-xl-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!-- /Call To Action Section -->
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>
-          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-          consectetur velit
-        </p>
-      </div>
-      <!-- End Section Title -->
-
-      <div class="container">
-        <div
-          class="isotope-layout"
-          data-default-filter="*"
-          data-layout="masonry"
-          data-sort="original-order"
-        >
-          <ul
-            class="portfolio-filters isotope-filters"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
-          </ul>
-          <!-- End Portfolio Filters -->
-
-          <div
-            class="row gy-4 isotope-container"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div
-              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
-            >
-              <img
-                src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a
-                  href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg"
-                  title="App 1"
-                  data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link"
-                ><i class="bi bi-zoom-in"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  class="details-link"
-                ><i class="bi bi-link-45deg"></i
-                ></a>
-              </div>
-            </div>
-            <!-- End Portfolio Item -->
-
-            <div
-              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
-            >
-              <img
-                src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a
-                  href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg"
-                  title="Product 1"
-                  data-gallery="portfolio-gallery-product"
-                  class="glightbox preview-link"
-                ><i class="bi bi-zoom-in"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  class="details-link"
-                ><i class="bi bi-link-45deg"></i
-                ></a>
-              </div>
-            </div>
-            <!-- End Portfolio Item -->
-
-            <div
-              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
-            >
-              <img
-                src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a
-                  href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg"
-                  title="Branding 1"
-                  data-gallery="portfolio-gallery-branding"
-                  class="glightbox preview-link"
-                ><i class="bi bi-zoom-in"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  class="details-link"
-                ><i class="bi bi-link-45deg"></i
-                ></a>
-              </div>
-            </div>
-            <!-- End Portfolio Item -->
-
-            <div
-              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
-            >
-              <img
-                src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a
-                  href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg"
-                  title="App 2"
-                  data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link"
-                ><i class="bi bi-zoom-in"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  class="details-link"
-                ><i class="bi bi-link-45deg"></i
-                ></a>
-              </div>
-            </div>
-            <!-- End Portfolio Item -->
-
-            <div
-              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
-            >
-              <img
-                src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a
-                  href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg"
-                  title="Product 2"
-                  data-gallery="portfolio-gallery-product"
-                  class="glightbox preview-link"
-                ><i class="bi bi-zoom-in"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  class="details-link"
-                ><i class="bi bi-link-45deg"></i
-                ></a>
-              </div>
-            </div>
-            <!-- End Portfolio Item -->
-
-            <div
-              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
-            >
-              <img
-                src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a
-                  href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg"
-                  title="Branding 2"
-                  data-gallery="portfolio-gallery-branding"
-                  class="glightbox preview-link"
-                ><i class="bi bi-zoom-in"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  class="details-link"
-                ><i class="bi bi-link-45deg"></i
-                ></a>
-              </div>
-            </div>
-            <!-- End Portfolio Item -->
-
-            <div
-              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
-            >
-              <img
-                src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a
-                  href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg"
-                  title="App 3"
-                  data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link"
-                ><i class="bi bi-zoom-in"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  class="details-link"
-                ><i class="bi bi-link-45deg"></i
-                ></a>
-              </div>
-            </div>
-            <!-- End Portfolio Item -->
-
-            <div
-              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
-            >
-              <img
-                src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a
-                  href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg"
-                  title="Product 3"
-                  data-gallery="portfolio-gallery-product"
-                  class="glightbox preview-link"
-                ><i class="bi bi-zoom-in"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  class="details-link"
-                ><i class="bi bi-link-45deg"></i
-                ></a>
-              </div>
-            </div>
-            <!-- End Portfolio Item -->
-
-            <div
-              class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
-            >
-              <img
-                src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a
-                  href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg"
-                  title="Branding 2"
-                  data-gallery="portfolio-gallery-branding"
-                  class="glightbox preview-link"
-                ><i class="bi bi-zoom-in"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  class="details-link"
-                ><i class="bi bi-link-45deg"></i
-                ></a>
-              </div>
-            </div>
-            <!-- End Portfolio Item -->
-          </div>
-          <!-- End Portfolio Container -->
-        </div>
-      </div>
-    </section>
-    <!-- /Portfolio Section -->
-
-    <!-- Team Section -->
-    <section id="team" class="team section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Team</h2>
-        <p>
-          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-          consectetur velit
-        </p>
-      </div>
-      <!-- End Section Title -->
-
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="team-member d-flex align-items-start">
-              <div class="pic">
-                <img
-                  src="assets/img/team/team-1.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-              </div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <p>
-                  Explicabo voluptatem mollitia et repellat qui dolorum quasi
-                </p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-member d-flex align-items-start">
-              <div class="pic">
-                <img
-                  src="assets/img/team/team-2.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-              </div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-                <p>
-                  Aut maiores voluptates amet et quis praesentium qui senda
-                  para
-                </p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member d-flex align-items-start">
-              <div class="pic">
-                <img
-                  src="assets/img/team/team-3.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-              </div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <p>
-                  Quisquam facilis cum velit laborum corrupti fuga rerum quia
-                </p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member d-flex align-items-start">
-              <div class="pic">
-                <img
-                  src="assets/img/team/team-4.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-              </div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-                <p>
-                  Dolorum tempora officiis odit laborum officiis et et
-                  accusamus
-                </p>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""> <i class="bi bi-linkedin"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End Team Member -->
-        </div>
-      </div>
-    </section>
-    <!-- /Team Section -->
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Pricing</h2>
-        <p>
-          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-          consectetur velit
-        </p>
-      </div>
-      <!-- End Section Title -->
-
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="pricing-item">
-              <h3>Free Plan</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li>
-                  <i class="bi bi-check"></i>
-                  <span>Quam adipiscing vitae proin</span>
-                </li>
-                <li>
-                  <i class="bi bi-check"></i>
-                  <span>Nec feugiat nisl pretium</span>
-                </li>
-                <li>
-                  <i class="bi bi-check"></i>
-                  <span>Nulla at volutpat diam uteera</span>
-                </li>
-                <li class="na">
-                  <i class="bi bi-x"></i>
-                  <span>Pharetra massa massa ultricies</span>
-                </li>
-                <li class="na">
-                  <i class="bi bi-x"></i>
-                  <span>Massa ultricies mi quis hendrerit</span>
-                </li>
-              </ul>
-              <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-          </div>
-          <!-- End Pricing Item -->
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="pricing-item featured">
-              <h3>Business Plan</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li>
-                  <i class="bi bi-check"></i>
-                  <span>Quam adipiscing vitae proin</span>
-                </li>
-                <li>
-                  <i class="bi bi-check"></i>
-                  <span>Nec feugiat nisl pretium</span>
-                </li>
-                <li>
-                  <i class="bi bi-check"></i>
-                  <span>Nulla at volutpat diam uteera</span>
-                </li>
-                <li>
-                  <i class="bi bi-check"></i>
-                  <span>Pharetra massa massa ultricies</span>
-                </li>
-                <li>
-                  <i class="bi bi-check"></i>
-                  <span>Massa ultricies mi quis hendrerit</span>
-                </li>
-              </ul>
-              <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-          </div>
-          <!-- End Pricing Item -->
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="pricing-item">
-              <h3>Developer Plan</h3>
-              <h4><sup>$</sup>49<span> / month</span></h4>
-              <ul>
-                <li>
-                  <i class="bi bi-check"></i>
-                  <span>Quam adipiscing vitae proin</span>
-                </li>
-                <li>
-                  <i class="bi bi-check"></i>
-                  <span>Nec feugiat nisl pretium</span>
-                </li>
-                <li>
-                  <i class="bi bi-check"></i>
-                  <span>Nulla at volutpat diam uteera</span>
-                </li>
-                <li>
-                  <i class="bi bi-check"></i>
-                  <span>Pharetra massa massa ultricies</span>
-                </li>
-                <li>
-                  <i class="bi bi-check"></i>
-                  <span>Massa ultricies mi quis hendrerit</span>
-                </li>
-              </ul>
-              <a href="#" class="buy-btn">Buy Now</a>
-            </div>
-          </div>
-          <!-- End Pricing Item -->
-        </div>
-      </div>
-    </section>
-    <!-- /Pricing Section -->
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>
-          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-          consectetur velit
-        </p>
-      </div>
-      <!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img
-                  src="assets/img/testimonials/testimonials-1.jpg"
-                  class="testimonial-img"
-                  alt=""
-                />
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i
-                  ><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span
-                  >Proin iaculis purus consequat sem cure digni ssim donec
-                      porttitora entum suscipit rhoncus. Accusantium quam,
-                      ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                      risus at semper.</span
-                  >
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-            <!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img
-                  src="assets/img/testimonials/testimonials-2.jpg"
-                  class="testimonial-img"
-                  alt=""
-                />
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i
-                  ><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span
-                  >Export tempor illum tamen malis malis eram quae irure
-                      esse labore quem cillum quid cillum eram malis quorum
-                      velit fore eram velit sunt aliqua noster fugiat irure amet
-                      legam anim culpa.</span
-                  >
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-            <!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img
-                  src="assets/img/testimonials/testimonials-3.jpg"
-                  class="testimonial-img"
-                  alt=""
-                />
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i
-                  ><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span
-                  >Enim nisi quem export duis labore cillum quae magna enim
-                      sint quorum nulla quem veniam duis minim tempor labore
-                      quem eram duis noster aute amet eram fore quis sint
-                      minim.</span
-                  >
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-            <!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img
-                  src="assets/img/testimonials/testimonials-4.jpg"
-                  class="testimonial-img"
-                  alt=""
-                />
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i
-                  ><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span
-                  >Fugiat enim eram quae cillum dolore dolor amet nulla
-                      culpa multos export minim fugiat minim velit minim dolor
-                      enim duis veniam ipsum anim magna sunt elit fore quem
-                      dolore labore illum veniam.</span
-                  >
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-            <!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img
-                  src="assets/img/testimonials/testimonials-5.jpg"
-                  class="testimonial-img"
-                  alt=""
-                />
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i
-                  ><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i
-                ><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span
-                  >Quis quorum aliqua sint quem legam fore sunt eram irure
-                      aliqua veniam tempor noster veniam enim culpa labore duis
-                      sunt culpa nulla illum cillum fugiat legam esse veniam
-                      culpa fore nisi cillum quid.</span
-                  >
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-            <!-- End testimonial item -->
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section>
-    <!-- /Testimonials Section -->
-
-    <!-- Faq 2 Section -->
-    <section id="faq-2" class="faq-2 section">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Frequently Asked Questions</h2>
-        <p>
-          Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-          aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-          quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-          fugiat sit in iste officiis commodi quidem hic quas.
-        </p>
-      </div>
-      <!-- End Section Title -->
-
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="faq-container">
-              <div
-                class="faq-item faq-active"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Non consectetur a erat nam at lectus urna duis?</h3>
-                <div class="faq-content">
-                  <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna
-                    id volutpat lacus laoreet non curabitur gravida. Venenatis
-                    lectus magna fringilla urna porttitor rhoncus dolor purus
-                    non.
-                  </p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-              <!-- End Faq item-->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>
-                  Feugiat scelerisque varius morbi enim nunc faucibus a
-                  pellentesque?
-                </h3>
-                <div class="faq-content">
-                  <p>
-                    Dolor sit amet consectetur adipiscing elit pellentesque
-                    habitant morbi. Id interdum velit laoreet id donec
-                    ultrices. Fringilla phasellus faucibus scelerisque
-                    eleifend donec pretium. Est pellentesque elit ullamcorper
-                    dignissim. Mauris ultrices eros in cursus turpis massa
-                    tincidunt dui.
-                  </p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-              <!-- End Faq item-->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>
-                  Dolor sit amet consectetur adipiscing elit pellentesque?
-                </h3>
-                <div class="faq-content">
-                  <p>
-                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices
-                    sagittis orci. Faucibus pulvinar elementum integer enim.
-                    Sem nulla pharetra diam sit amet nisl suscipit. Rutrum
-                    tellus pellentesque eu tincidunt. Lectus urna duis
-                    convallis convallis tellus. Urna molestie at elementum eu
-                    facilisis sed odio morbi quis
-                  </p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-              <!-- End Faq item-->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>
-                  Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
-                </h3>
-                <div class="faq-content">
-                  <p>
-                    Dolor sit amet consectetur adipiscing elit pellentesque
-                    habitant morbi. Id interdum velit laoreet id donec
-                    ultrices. Fringilla phasellus faucibus scelerisque
-                    eleifend donec pretium. Est pellentesque elit ullamcorper
-                    dignissim. Mauris ultrices eros in cursus turpis massa
-                    tincidunt dui.
-                  </p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-              <!-- End Faq item-->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>
-                  Tempus quam pellentesque nec nam aliquam sem et tortor
-                  consequat?
-                </h3>
-                <div class="faq-content">
-                  <p>
-                    Molestie a iaculis at erat pellentesque adipiscing
-                    commodo. Dignissim suspendisse in est ante in. Nunc vel
-                    risus commodo viverra maecenas accumsan. Sit amet nisl
-                    suscipit adipiscing bibendum est. Purus gravida quis
-                    blandit turpis cursus in
-                  </p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-              <!-- End Faq item-->
-            </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" style="text-align: left">
+              <span id="integrator-description1">
+                MACONDO Engineering is a registered Integrator of
+              </span>
+            <a id="integrator-link1" href="https://inductiveautomation.com?rfid=196977">Inductive Automation</a>
+            <span id="integrator-description2">
+                products in Tunisia. We provide the installation, and technical support, of industrial automation software and platforms, like SCADA systems, to control of processes and to analyse data from Your machines and stations…
+              </span>
+            <a id="integrator-link2" href="https://inductiveautomation.com/downloads/?rfid=196977">find more</a>
+            .
           </div>
         </div>
       </div>
     </section>
-    <!-- /Faq 2 Section -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title" >
         <h2>Contact</h2>
       </div>
       <!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" >
         <div class="row gy-4">
-          <div class="col-lg-5">
+          <div class="col-lg-6">
             <div class="info-wrap">
               <div
                 class="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay="200"
+
+
               >
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h3>Address</h3>
-                  <p>Bureau A1 Immeuble Tamayouz, Centre Urban Nord, 1082, Tunis.</p>
+                  <p>
+                    Bureau A1 Immeuble Tamayouz, Centre Urban Nord, 1082, Tunis
+                  </p>
                 </div>
               </div>
               <!-- End Info Item -->
 
               <div
                 class="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay="300"
+
+
               >
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
                   <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32"><rect x="1" y="4" width="30" height="24" rx="4" ry="4" fill="#d52e23"></rect><path d="M27,4H5c-2.209,0-4,1.791-4,4V24c0,2.209,1.791,4,4,4H27c2.209,0,4-1.791,4-4V8c0-2.209-1.791-4-4-4Zm3,20c0,1.654-1.346,3-3,3H5c-1.654,0-3-1.346-3-3V8c0-1.654,1.346-3,3-3H27c1.654,0,3,1.346,3,3V24Z" opacity=".15"></path><path d="M27,5H5c-1.657,0-3,1.343-3,3v1c0-1.657,1.343-3,3-3H27c1.657,0,3,1.343,3,3v-1c0-1.657-1.343-3-3-3Z" fill="#fff" opacity=".2"></path><path d="M16,10c-3.314,0-6,2.686-6,6s2.686,6,6,6,6-2.686,6-6-2.686-6-6-6Zm3.384,7.587l-1.865-.606-1.153,1.587v-1.962l-1.866-.606,1.866-.606v-1.962l1.153,1.587,1.865-.606-1.153,1.587,1.153,1.587Zm-2.184-5.187c-1.988,0-3.6,1.612-3.6,3.6s1.612,3.6,3.6,3.6c.941,0,1.797-.361,2.438-.951-.818,1.122-2.143,1.851-3.638,1.851-2.485,0-4.5-2.015-4.5-4.5s2.015-4.5,4.5-4.5c1.495,0,2.82,.729,3.638,1.851-.641-.591-1.497-.951-2.438-.951Z" fill="#fff"></path></svg>
+                    <span class="mx-2">+216 51 889 001</span>
+                  </div>
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32"><path fill="#fff" d="M10 4H22V28H10z"></path><path d="M5,4h6V28H5c-2.208,0-4-1.792-4-4V8c0-2.208,1.792-4,4-4Z" fill="#092050"></path><path d="M25,4h6V28h-6c-2.208,0-4-1.792-4-4V8c0-2.208,1.792-4,4-4Z" transform="rotate(180 26 16)" fill="#be2a2c"></path><path d="M27,4H5c-2.209,0-4,1.791-4,4V24c0,2.209,1.791,4,4,4H27c2.209,0,4-1.791,4-4V8c0-2.209-1.791-4-4-4Zm3,20c0,1.654-1.346,3-3,3H5c-1.654,0-3-1.346-3-3V8c0-1.654,1.346-3,3-3H27c1.654,0,3,1.346,3,3V24Z" opacity=".15"></path><path d="M27,5H5c-1.657,0-3,1.343-3,3v1c0-1.657,1.343-3,3-3H27c1.657,0,3,1.343,3,3v-1c0-1.657-1.343-3-3-3Z" fill="#fff" opacity=".2"></path></svg>
+                    <span class="mx-2">+33 7 51 35 34 20</span>
+                  </div>
                 </div>
               </div>
               <!-- End Info Item -->
 
               <div
                 class="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay="400"
+
+
               >
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>Email Us</h3>
-                  <p>info@example.com</p>
+                  <p>contact@macondo-engineering.com</p>
+                </div>
+              </div>
+              <!-- End Info Item -->
+
+              <div
+                class="info-item d-flex"
+
+
+              >
+                <i class="bi bi-linkedin flex-shrink-0"></i>
+                <div>
+                  <h3>LinkedIn</h3>
+                  <a href="https://www.linkedin.com/company/macondo-engineering">MACONDO ENGINEERING</a>
                 </div>
               </div>
               <!-- End Info Item -->
 
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
+                src="https://maps.google.com/maps?width=100%25&amp;height=270&amp;hl=en&amp;q=Immeuble%20Tamayouz,%20Centre%20Urban%20Nord,%201082,%20Tunis.+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                 frameborder="0"
                 style="border: 0; width: 100%; height: 270px"
                 allowfullscreen=""
@@ -1439,14 +516,13 @@
               ></iframe>
             </div>
           </div>
-
-          <div class="col-lg-7">
+          <div class="col-lg-6">
             <form
               action="forms/contact.php"
               method="post"
               class="php-email-form"
-              data-aos="fade-up"
-              data-aos-delay="200"
+
+
             >
               <div class="row gy-4">
                 <div class="col-md-6">
@@ -1505,10 +581,16 @@
               </div>
             </form>
           </div>
+
+
           <!-- End Contact Form -->
         </div>
       </div>
     </section>
     <!-- /Contact Section -->
-  </div>
+
+
+  </main>
+
 </div>
+<app-footer></app-footer>

@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'macondo-vitrine';
+  selectedLanguge : any;
+
+  switchLanguge(){
+    console.log(this.selectedLanguge)
+  }
 }
